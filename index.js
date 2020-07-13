@@ -1,8 +1,19 @@
 
-function takeANumber(currentLine, newName) {
-  currentLine.push(newName);
-  return `Welcome, ${newName}. You are number ${currentLine.indexOf(newName) + 1} in line.`;
+// function takeANumber(currentLine, newName) {
+//   currentLine.push(newName);
+//   return `Welcome, ${newName}. You are number ${currentLine.indexOf(newName) + 1} in line.`;
+// }
+
+let counter = 0;
+function takeANumber(line){
+  //create a counter variable that increments throughout the day
+  //increment counter every time function is run
+  counter++;
+  line.push(counter);
+  return `Welcome, you are number ${counter}.`
 }
+
+
 
 function nowServing(currentLine){
   let personServing;
@@ -11,7 +22,7 @@ function nowServing(currentLine){
   }
     personServing = currentLine[0];
     currentLine.shift();
-    console.log(currentLine);
+    //console.log(currentLine);
   return `Currently serving ${personServing}.`;
 
 }
